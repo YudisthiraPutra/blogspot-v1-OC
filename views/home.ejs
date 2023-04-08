@@ -1,0 +1,13 @@
+<%- include('partial/header'); -%>
+
+<h1>Home</h1>
+<p> <%=homeContent %> </p>
+
+<% uploadedContent.forEach(function(contents) { %>
+    <h1> <%= contents.title %> </h1>
+    <p> 
+    <%= contents.content.substring(0,100)+"..." %>
+    <a href="/post/<%=contents.title%>" >Read More</a></p>
+<% }) %>
+
+<%- include('partial/footer'); -%>
